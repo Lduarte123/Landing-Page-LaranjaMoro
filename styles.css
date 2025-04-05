@@ -87,3 +87,20 @@
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
     }
 }
+@media (max-width: 767px) {
+    .w-40 {
+        width: 12rem; /* 192px, maior no celular */
+    }
+}
+
+@media (min-width: 768px) {
+    .w-40 {
+        width: 10rem; /* 160px, maior para telas médias */
+    }
+}
+
+@media (min-width: 1024px) {
+    .w-64 {
+        width: 16rem; /* 256px, maior para telas grandes */
+    }
+}
