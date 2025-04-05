@@ -5,9 +5,48 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-.scroll-text {
-    transition: transform 0.5s ease-in-out;
+.scroll-container {
+    background-color: #c2410c; /* bg-orange-700 */
+    color: white;
+    font-weight: bold;
+    font-size: 1.125rem; /* text-lg */
+    padding: 1rem; /* p-4 */
+    width: 100%;
+    overflow: hidden;
 }
-.scroll-container:hover .scroll-text {
-    transform: translateX(20px);
+
+.scroll-text {
+    display: inline-block;
+    white-space: nowrap; /* Impede que o texto quebre em linhas */
+    animation: scroll 30s linear infinite; /* Define a animação */
+}
+
+.scroll-text span {
+    margin-right: 3rem; /* Espaçamento entre os textos */
+}
+
+/* Animação de rolagem */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); /* Começa fora da tela à direita */
+    }
+    100% {
+        transform: translateX(-100%); /* Termina fora da tela à esquerda */
+    }
+}
+.carousel-item .card > div:first-child {
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #F97316; /* border-orange-500 */
+    background-color: #C2410C; /* bg-orange-900 */
+}
+@media (max-width: 768px) {
+    .carousel {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+    .carousel-item {
+        scroll-snap-align: center;
+    }
 }
