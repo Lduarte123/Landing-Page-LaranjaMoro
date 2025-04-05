@@ -50,3 +50,40 @@
         scroll-snap-align: center;
     }
 }
+@media (max-width: 768px) {
+    .card {
+        width: 90%; /* Aumenta a largura no mobile para ocupar mais espaço */
+        min-height: 400px; /* Reduz a altura mínima */
+        border-radius: 20px; /* Bordas mais arredondadas para menos "reto" */
+        padding: 4rem 1.5rem 1.5rem; /* Mais espaço interno no topo */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    }
+
+    .card h2 {
+        font-size: 1.25rem; /* Texto menor no título */
+        margin-top: 4rem; /* Ajusta o espaço para a imagem menor */
+    }
+
+    .card p {
+        font-size: 0.875rem; /* Texto menor no parágrafo */
+        line-height: 1.4; /* Espaçamento mais confortável */
+    }
+
+    .card img:not(.absolute) {
+        width: 5rem; /* Logo menor no mobile */
+    }
+
+    .card .absolute {
+        top: -3.5rem; /* Imagem circular menos "afundada" */
+        width: 6rem; /* Tamanho menor no mobile */
+        height: 6rem;
+    }
+}
+
+/* Hover para desktop */
+@media (min-width: 769px) {
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+}
